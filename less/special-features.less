@@ -1,0 +1,299 @@
+@import "mixins.less";
+/* == make slider description float looking, and homepage tabs */
+.home-layout-option2, .home-layout-option4 {
+    .flex-direction-nav {
+        width: 100%;
+        padding-left: 0;
+        border-width: 0;
+        height: 60%;
+        right: 0;
+    }
+
+    .flex-direction-nav a {
+        background-image: none;
+        background-color: transparent;
+        height: 50px;
+        width: 35px;
+        color: transparent;
+        font-size: 3.5em;
+        line-height: 85%;
+        padding-left: 10px;
+        text-indent: 0;
+        margin-top: 0;
+        visibility: hidden;
+        overflow: auto;
+    }
+
+    .flex-direction-nav a.flex-prev:before, .flex-direction-nav a.flex-next:before {
+      color: #fff;
+      visibility: initial;
+    }
+    .flex-direction-nav a.flex-prev:before {
+      content: "«";
+
+    }
+    .flex-direction-nav a.flex-next:before {
+      content: "»";
+    }
+
+    .flexslider .flex-pauseplay {
+        display: none;
+    }
+
+    .flexslider .flex-counter {
+        z-index: 110;
+    }
+    /** NEW STYLE **/
+    .flexslider .carousel-caption {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: -50px auto;
+        padding: 25px 20px 0;
+        width: 85%;
+        height: 150px!important;
+        background: #fff;
+        text-align: center;
+    }
+
+    #ubc7-carousel .carousel-caption h4, #ubc7-carousel .carousel-caption p, .ubc-carousel .carousel-caption h4, .ubc-carousel .carousel-caption p {
+        margin-right: auto;
+        padding: 0;
+    }
+
+    .carousel-caption h4 a {
+        color: @ctlt-color;
+        font-weight: 400;
+        color: @ctlt-color!important;
+        font-size: 186.4%;
+        line-height: 1.2;
+        margin: 0 0 3%;
+        letter-spacing: 2px;
+    }
+
+    .carousel-caption p {
+        color: #222;
+    }
+
+    .flex-counter {
+        color: #222;
+        margin: 55px auto 0;
+        width: 20%;
+        display: block;
+        position: relative;
+        text-align: center;
+        right: auto;
+    }
+
+    .flex-direction-nav, .flex-pauseplay, .flex-counter {
+        height: auto;
+        /* position: absolute; */;
+    }
+
+    .flex-direction-nav a.flex-prev:before, .flex-direction-nav a.flex-next:before {
+        color: #666;
+    }
+
+    .flex-direction-nav a:hover {
+        background-color: transparent;
+    }
+
+    .flex-direction-nav a:hover.flex-prev:before, .flex-direction-nav a:hover.flex-next:before {
+        color: #000;
+    }
+
+    @media (min-width: 1200px) {
+        .flexslider .flex-pauseplay {
+            right: 6%;
+        }
+    }
+
+    @media (min-width: 980px) and (max-width: 1199px) {
+        .flexslider .flex-pauseplay {
+            right: 7%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 979px) {
+        .flexslider .flex-pauseplay {
+            right: 8%;
+        }
+
+        .flexslider .carousel-caption p {
+            height: 21%;
+        }
+        /** NEW **/
+        .carousel-caption h4 a {
+            font-size: 156.4%;
+        }
+    }
+
+    @media (min-width: 490px) and (max-width: 767px) {
+        .flexslider .flex-pauseplay {
+            right: 11%;
+        }
+
+        .flexslider .carousel-caption p {
+            display: none;
+        }
+    }
+
+    @media (max-width: 541px) {
+        .flexslider .flex-pauseplay {
+            right: 14%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .flexslider .carousel-caption {
+            position: relative;
+            background: none;
+            background-color: @ctlt-color;
+            min-height: 75px;
+        }
+
+        .flexslider .carousel-caption h4 {
+            font-size: 14px;
+        }
+
+        .flex-direction-nav a {
+            margin-top: 0;
+            top: 20px;
+        }
+
+        .flex-direction-nav {
+            height: 80%;
+            font-size: 12px;
+        }
+
+        .home .tabbable {
+            margin-right: -18px;
+            margin-left: -18px;
+        }
+        /* NEw Slider */
+        /** NEW STYLE **/
+        .flexslider .carousel-caption {
+            height: 120px!important;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .carousel-caption h4 a {
+            font-weight: 400;
+            color: #fff!important;
+            font-size: 136.4%;
+            line-height: 1.2;
+            margin: 0 0 3%;
+            letter-spacing: 2px;
+        }
+
+        .carousel-caption p {
+            color: #222;
+        }
+
+        .flex-counter {
+            position: absolute;
+            padding: 0;
+            color: #fff;
+            margin: 0 auto;
+        }
+    }
+}
+
+/* ========================================================
+== Custom Tabs Look 
+========================================================*/
+.nav-tabs, .nav-tabs>li>a {
+    border-color: @ctlt-color;
+}
+
+.home #content ul.nav-tabs {
+    border-color: transparent;
+    margin-bottom: 0
+}
+
+.nav-tabs>li>a {
+    margin: 0;
+    background: #fff;
+    color: @ctlt-color;
+    font-weight: 400;
+    border: 1px solid @ctlt-color;
+    border-width: 1px 1px 1px 0;
+}
+
+#content .nav-tabs>li>a:hover {
+    text-decoration: none
+}
+
+.nav-tabs li:first-child a, #content .nav-tabs li:first-child a:hover,  #content .nav-tabs li.active:first-child a {
+    border-left-width: 1px;
+}
+
+#content .nav-tabs > .active > a, #content .nav-tabs > li > a:hover {
+    background-color: @ctlt-color;
+    border: 1px solid @ctlt-color;
+    border-width: 1px 1px 1px 0;
+    color: #fff;
+}
+.home .tab-content {
+    border: 1px solid @ctlt-color;
+    padding: 0 15px;
+}
+#content .tab-pane a, #content .tab-pane a:hover {
+    text-decoration: none
+}
+/* ========================================================
+== Custom Accordions Look 
+========================================================*/
+.sidenav .accordion-heading:hover, .sidenav .accordion-heading a:hover, .sidenav .accordion-heading:hover a:focus, .sidenav .accordion-heading:hover a:active, .sidenav .accordion-heading:hover .accordion-toggle, .sidenav .accordion-inner a:hover {
+    background-color: @ctlt-color!important;
+    color: #fff;
+}
+#content .accordion-heading a:hover, #content .accordion-heading a:active, #content .accordion-heading a:focus {
+    background-color: @ctlt-color;
+    color: #fff;
+}
+#content .accordion-toggle, #content .accordion-toggle:hover {
+    text-decoration: none;
+}
+/* ========================================================
+== Landing Boxes
+========================================================*/
+#content .landing-boxes {
+    [class*="span"] {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        margin: 15px 0 20px;
+        font-size: 186.4%;
+        line-height: 163.3%;
+        margin: 0 0 3%;
+        letter-spacing: 2px;
+
+        a {
+            text-decoration: none
+        }
+    }
+    .btn {
+        margin-top: 15px
+    }
+}
+
+#content .landing-boxes h3 a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+    .landing-boxes [class*="span"] {
+        border-top: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+}

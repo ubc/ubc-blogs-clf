@@ -1,0 +1,331 @@
+/* == make slider description float looking, and homepage tabs */
+.home-layout-option2,
+.home-layout-option4 {
+  /** NEW STYLE **/
+
+}
+.home-layout-option2 .flex-direction-nav,
+.home-layout-option4 .flex-direction-nav {
+  width: 100%;
+  padding-left: 0;
+  border-width: 0;
+  height: 60%;
+  right: 0;
+}
+.home-layout-option2 .flex-direction-nav a,
+.home-layout-option4 .flex-direction-nav a {
+  background-image: none;
+  background-color: transparent;
+  height: 50px;
+  width: 35px;
+  color: transparent;
+  font-size: 3.5em;
+  line-height: 85%;
+  padding-left: 10px;
+  text-indent: 0;
+  margin-top: 0;
+  visibility: hidden;
+  overflow: auto;
+}
+.home-layout-option2 .flex-direction-nav a.flex-prev:before,
+.home-layout-option4 .flex-direction-nav a.flex-prev:before,
+.home-layout-option2 .flex-direction-nav a.flex-next:before,
+.home-layout-option4 .flex-direction-nav a.flex-next:before {
+  color: #fff;
+  visibility: initial;
+}
+.home-layout-option2 .flex-direction-nav a.flex-prev:before,
+.home-layout-option4 .flex-direction-nav a.flex-prev:before {
+  content: "«";
+}
+.home-layout-option2 .flex-direction-nav a.flex-next:before,
+.home-layout-option4 .flex-direction-nav a.flex-next:before {
+  content: "»";
+}
+.home-layout-option2 .flexslider .flex-pauseplay,
+.home-layout-option4 .flexslider .flex-pauseplay {
+  display: none;
+}
+.home-layout-option2 .flexslider .flex-counter,
+.home-layout-option4 .flexslider .flex-counter {
+  z-index: 110;
+}
+.home-layout-option2 .flexslider .carousel-caption,
+.home-layout-option4 .flexslider .carousel-caption {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: -50px auto;
+  padding: 25px 20px 0;
+  width: 85%;
+  height: 150px!important;
+  background: #fff;
+  text-align: center;
+}
+.home-layout-option2 #ubc7-carousel .carousel-caption h4,
+.home-layout-option4 #ubc7-carousel .carousel-caption h4,
+.home-layout-option2 #ubc7-carousel .carousel-caption p,
+.home-layout-option4 #ubc7-carousel .carousel-caption p,
+.home-layout-option2 .ubc-carousel .carousel-caption h4,
+.home-layout-option4 .ubc-carousel .carousel-caption h4,
+.home-layout-option2 .ubc-carousel .carousel-caption p,
+.home-layout-option4 .ubc-carousel .carousel-caption p {
+  margin-right: auto;
+  padding: 0;
+}
+.home-layout-option2 .carousel-caption h4 a,
+.home-layout-option4 .carousel-caption h4 a {
+  color: #166a9a;
+  font-weight: 400;
+  color: #166a9a !important;
+  font-size: 186.4%;
+  line-height: 1.2;
+  margin: 0 0 3%;
+  letter-spacing: 2px;
+}
+.home-layout-option2 .carousel-caption p,
+.home-layout-option4 .carousel-caption p {
+  color: #222;
+}
+.home-layout-option2 .flex-counter,
+.home-layout-option4 .flex-counter {
+  color: #222;
+  margin: 55px auto 0;
+  width: 20%;
+  display: block;
+  position: relative;
+  text-align: center;
+  right: auto;
+}
+.home-layout-option2 .flex-direction-nav,
+.home-layout-option4 .flex-direction-nav,
+.home-layout-option2 .flex-pauseplay,
+.home-layout-option4 .flex-pauseplay,
+.home-layout-option2 .flex-counter,
+.home-layout-option4 .flex-counter {
+  height: auto;
+  /* position: absolute; */
+}
+.home-layout-option2 .flex-direction-nav a.flex-prev:before,
+.home-layout-option4 .flex-direction-nav a.flex-prev:before,
+.home-layout-option2 .flex-direction-nav a.flex-next:before,
+.home-layout-option4 .flex-direction-nav a.flex-next:before {
+  color: #666;
+}
+.home-layout-option2 .flex-direction-nav a:hover,
+.home-layout-option4 .flex-direction-nav a:hover {
+  background-color: transparent;
+}
+.home-layout-option2 .flex-direction-nav a:hover.flex-prev:before,
+.home-layout-option4 .flex-direction-nav a:hover.flex-prev:before,
+.home-layout-option2 .flex-direction-nav a:hover.flex-next:before,
+.home-layout-option4 .flex-direction-nav a:hover.flex-next:before {
+  color: #000;
+}
+@media (min-width: 1200px) {
+  .home-layout-option2 .flexslider .flex-pauseplay,
+  .home-layout-option4 .flexslider .flex-pauseplay {
+    right: 6%;
+  }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  .home-layout-option2 .flexslider .flex-pauseplay,
+  .home-layout-option4 .flexslider .flex-pauseplay {
+    right: 7%;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .home-layout-option2,
+  .home-layout-option4 {
+    /** NEW **/
+  
+  }
+  .home-layout-option2 .flexslider .flex-pauseplay,
+  .home-layout-option4 .flexslider .flex-pauseplay {
+    right: 8%;
+  }
+  .home-layout-option2 .flexslider .carousel-caption p,
+  .home-layout-option4 .flexslider .carousel-caption p {
+    height: 21%;
+  }
+  .home-layout-option2 .carousel-caption h4 a,
+  .home-layout-option4 .carousel-caption h4 a {
+    font-size: 156.4%;
+  }
+}
+@media (min-width: 490px) and (max-width: 767px) {
+  .home-layout-option2 .flexslider .flex-pauseplay,
+  .home-layout-option4 .flexslider .flex-pauseplay {
+    right: 11%;
+  }
+  .home-layout-option2 .flexslider .carousel-caption p,
+  .home-layout-option4 .flexslider .carousel-caption p {
+    display: none;
+  }
+}
+@media (max-width: 541px) {
+  .home-layout-option2 .flexslider .flex-pauseplay,
+  .home-layout-option4 .flexslider .flex-pauseplay {
+    right: 14%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-layout-option2,
+  .home-layout-option4 {
+    /* NEw Slider */
+  
+    /** NEW STYLE **/
+  
+  }
+  .home-layout-option2 .flexslider .carousel-caption,
+  .home-layout-option4 .flexslider .carousel-caption {
+    position: relative;
+    background: none;
+    background-color: #166a9a;
+    min-height: 75px;
+  }
+  .home-layout-option2 .flexslider .carousel-caption h4,
+  .home-layout-option4 .flexslider .carousel-caption h4 {
+    font-size: 14px;
+  }
+  .home-layout-option2 .flex-direction-nav a,
+  .home-layout-option4 .flex-direction-nav a {
+    margin-top: 0;
+    top: 20px;
+  }
+  .home-layout-option2 .flex-direction-nav,
+  .home-layout-option4 .flex-direction-nav {
+    height: 80%;
+    font-size: 12px;
+  }
+  .home-layout-option2 .home .tabbable,
+  .home-layout-option4 .home .tabbable {
+    margin-right: -18px;
+    margin-left: -18px;
+  }
+  .home-layout-option2 .flexslider .carousel-caption,
+  .home-layout-option4 .flexslider .carousel-caption {
+    height: 120px!important;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .home-layout-option2 .carousel-caption h4 a,
+  .home-layout-option4 .carousel-caption h4 a {
+    font-weight: 400;
+    color: #fff!important;
+    font-size: 136.4%;
+    line-height: 1.2;
+    margin: 0 0 3%;
+    letter-spacing: 2px;
+  }
+  .home-layout-option2 .carousel-caption p,
+  .home-layout-option4 .carousel-caption p {
+    color: #222;
+  }
+  .home-layout-option2 .flex-counter,
+  .home-layout-option4 .flex-counter {
+    position: absolute;
+    padding: 0;
+    color: #fff;
+    margin: 0 auto;
+  }
+}
+/* ========================================================
+== Custom Tabs Look 
+========================================================*/
+.nav-tabs,
+.nav-tabs > li > a {
+  border-color: #166a9a;
+}
+.home #content ul.nav-tabs {
+  border-color: transparent;
+  margin-bottom: 0;
+}
+.nav-tabs > li > a {
+  margin: 0;
+  background: #fff;
+  color: #166a9a;
+  font-weight: 400;
+  border: 1px solid #166a9a;
+  border-width: 1px 1px 1px 0;
+}
+#content .nav-tabs > li > a:hover {
+  text-decoration: none;
+}
+.nav-tabs li:first-child a,
+#content .nav-tabs li:first-child a:hover,
+#content .nav-tabs li.active:first-child a {
+  border-left-width: 1px;
+}
+#content .nav-tabs > .active > a,
+#content .nav-tabs > li > a:hover {
+  background-color: #166a9a;
+  border: 1px solid #166a9a;
+  border-width: 1px 1px 1px 0;
+  color: #fff;
+}
+.home .tab-content {
+  border: 1px solid #166a9a;
+  padding: 0 15px;
+}
+#content .tab-pane a,
+#content .tab-pane a:hover {
+  text-decoration: none;
+}
+/* ========================================================
+== Custom Accordions Look 
+========================================================*/
+.sidenav .accordion-heading:hover,
+.sidenav .accordion-heading a:hover,
+.sidenav .accordion-heading:hover a:focus,
+.sidenav .accordion-heading:hover a:active,
+.sidenav .accordion-heading:hover .accordion-toggle,
+.sidenav .accordion-inner a:hover {
+  background-color: #166a9a !important;
+  color: #fff;
+}
+#content .accordion-heading a:hover,
+#content .accordion-heading a:active,
+#content .accordion-heading a:focus {
+  background-color: #166a9a;
+  color: #fff;
+}
+#content .accordion-toggle,
+#content .accordion-toggle:hover {
+  text-decoration: none;
+}
+/* ========================================================
+== Landing Boxes
+========================================================*/
+#content .landing-boxes [class*="span"] {
+  margin-bottom: 30px;
+}
+#content .landing-boxes h3 {
+  margin: 15px 0 20px;
+  font-size: 186.4%;
+  line-height: 163.3%;
+  margin: 0 0 3%;
+  letter-spacing: 2px;
+}
+#content .landing-boxes h3 a {
+  text-decoration: none;
+}
+#content .landing-boxes .btn {
+  margin-top: 15px;
+}
+#content .landing-boxes h3 a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .landing-boxes [class*="span"] {
+    border-top: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+  }
+}
