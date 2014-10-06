@@ -24,7 +24,7 @@ Class UBC_BLOGS_Theme_Options {
     
         self::$prefix = 'wp-hybrid-clf'; // function hybrid_get_prefix() is not available within the plugin
         
-        self::$faculty_main_homepage = 'http://www.blogs.ubc.ca';
+        self::$faculty_main_homepage = '//www.blogs.ubc.ca';
         
         $theme = wp_get_theme();
         
@@ -192,7 +192,7 @@ Class UBC_BLOGS_Theme_Options {
         </div>
       </div>
       <div id="education-unit-colour-box">
-        Read more about <a href="http://clf.educ.ubc.ca/design-style-guide/clf-specifications/#contrast" target="_blank">colour contrast</a> and <a href="http://clf.educ.ubc.ca/design-style-guide/clf-specifications/#contrast" target="_blank">web accesibility</a>.
+        Read more about <a href="//clf.educ.ubc.ca/design-style-guide/clf-specifications/#contrast" target="_blank">colour contrast</a> and <a href="//clf.educ.ubc.ca/design-style-guide/clf-specifications/#contrast" target="_blank">web accesibility</a>.
         <div class="education-colour-item main-color"><br />
           <div class="picker"><b>MAIN COLOUR</b><br /><small>Changes the color for all header tags, links, subnavigation active/current page, .btn (only the .btn), tab hover and active, and accordion hover.</small> <br /><br /></div>
           <?php  UBC_Collab_Theme_Options::text( 'blogs-main-colour' ); ?>
