@@ -3,7 +3,7 @@
 /*
   Plugin Name: UBC Blogs Website
   Plugin URI:  http://blogs.ubc.ca Blogs website | Note: This plugin will only work on wp-hybrid-clf theme
-  Version: 1.0
+  Version: 1.1
   Author: David Brabbins
   Licence: GPLv2
   Author URI: http://blogs.ubc.ca
@@ -37,6 +37,8 @@ Class UBC_BLOGS_Theme_Options {
 
         add_filter( 'ubc_collab_theme_options_validate', array(__CLASS__, 'validate'), 10, 2 );  
 
+        add_filter('wp_nav_menu_items', array(__CLASS__,'add_cwl_logo_to_menu'), 10, 2);
+
         add_action( 'wp_head', array( __CLASS__,'wp_head' ) );
 
         add_action( 'wp_footer', array( __CLASS__,'blogs_enqueue_script' ), 10, 1 );
@@ -45,7 +47,7 @@ Class UBC_BLOGS_Theme_Options {
         //Adds Stylesheet
         add_action('wp_enqueue_scripts', array(__CLASS__, 'blogs_theme_styles'));    
 
-        add_filter('wp-hybrid-clf_after_header', array(__CLASS__,'output_blogs_featured_img'), 11, 3);
+        add_filter('wp-hybrid-clf_after_header', array(__CLASS__,'output_blogs_featured_img'), 10, 3);
 
         add_action( 'wp_footer', array(__CLASS__,'blogs_global_js'), 10, 1 );
 
@@ -357,8 +359,6 @@ Class UBC_BLOGS_Theme_Options {
    */         
    static function output_blogs_featured_img(){
 
-     if ( is_page() && ! is_front_page() && ! is_home() ) {
-
           if (has_post_thumbnail()) {
 
             $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(),'full', true);
@@ -370,8 +370,17 @@ Class UBC_BLOGS_Theme_Options {
 			} else {
                     echo "";
                 }
-            }
-        }
+    }
+
+     static function add_cwl_logo_to_menu ( $items, $args ) {
+        
+          if ($args->theme_location == 'primary') {
+            if ( !is_user_logged_in() ): 
+              $items = '<a id="cwl-login" class="nav-cwl-login" href="/wp-login.php" title="Login or Signup for UBC Blogs"><img src="' . plugins_url('/ubc-blogs-clf/images/cwl_login_button.png') . '" alt="CWL_login_button" width="76" height="25" class="alignnone size-full wp-image-265"></a>'.$items;
+            endif;
+          }
+          return $items;
+  }
       /*** Start
       **/
       /**
@@ -379,7 +388,9 @@ Class UBC_BLOGS_Theme_Options {
      * Appends some of the dynamic css and js to the wordpress header
      */        
         static function wp_head(){ 
-
+          if (is_front_page() && !is_user_logged_in() && has_post_thumbnail()) :
+            $image_size_home = wp_get_attachment_image_src(get_post_thumbnail_id(),'full', true);
+          endif;
 
           // PHP will try to detect the middle count to help color contrast with background colors
           $hexcolor = UBC_Collab_Theme_Options::get('blogs-gradient-colour');
@@ -392,6 +403,13 @@ Class UBC_BLOGS_Theme_Options {
             //echo "hex: ".$hexcolor; echo " YIQ: ".$yiq;
           ?>
 <style type="text/css" media="screen">
+<?php if (is_front_page() && !is_user_logged_in() && has_post_thumbnail() ) : ?>
+/*-- Home page background image  ---------------------------*/
+.logged-out .home-hgroup {
+    background-image: url('<?php echo $image_size_home[0] ?>');
+}   
+<?php endif;
+ ?>
 /*-- Typography  ---------------------------*/
 #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a, #content a, #content .hero-unit h1, #frontpage-siderbar .tab-pane a {
  color:<?php echo UBC_Collab_Theme_Options::get('blogs-main-colour')?>;

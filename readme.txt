@@ -10,15 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-1. Color options for main and secondary
-1. Image uploads for banner and chevron
-1. Opens Sans Font Option
-1. Faculty of Education Style
-1. Background Texture
-1. Department/ Unit Header
-1. Circled Featured Images for pages. Find out more.
-1. Back to Top link
-
+Blogs Look and Feel
 == Installation ==
 
 This section describes how to install the plugin and get it working.
@@ -37,18 +29,9 @@ So far.
 
 == Changelog ==
 
-= Version 2.1 =
-Updates and enhancements on the plugin
-*. Full Width Styles added, centred and left
-*. Updated featured images to any size
-*. Open Sans font selection in theme options
-*. Minor tweaks for payload size
-
-= Version 2.0 =
-* Refined sidenav and top navigation styles
-* Refined the CSS for smaller file size
-* Added CSS colours for text and backgrounds
-* Updates and enhancements on the plugin
+= Version 1.1 =
+* Added Login button on main nav
+* New Home page look
 
 = Version 1.0 =
 * Upload
