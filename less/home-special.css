@@ -1,0 +1,172 @@
+.home .logged-out .row-fluid .utility.span12,
+.home .logged-out .content.expand {
+  height: 500px!important;
+  height: 100vh!important;
+}
+.logged-out.home .entry-content {
+  margin-top: 60px;
+}
+.logged-out .home-hgroup {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 560px;
+  height: 79vh;
+  background-attachment: fixed;
+  background-position: top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.logged-out .home-hgroup .page-title {
+  font-size: 600%;
+  font-weight: 600;
+  letter-spacing: 7px;
+  line-height: 133.3%;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+}
+.logged-out .home-hgroup p,
+.logged-out .home-hgroup .page-title {
+  margin-left: 50px;
+}
+.logged-out .home-hgroup a,
+.logged-out .home-hgroup p,
+.logged-out .home-hgroup .page-title {
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.logged-out .home-hgroup p {
+  display: inline-block;
+  padding: 50px 30px;
+  background-color: #0680a6;
+  background-color: rgba(6, 128, 166, 0.9);
+  font-size: 24px;
+}
+.logged-out .home-hgroup p span {
+  font-size: 16px;
+}
+.logged-out .home-hgroup a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.logged-out .home-hgroup hgroup {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.45)), color-stop(100%, rgba(0, 0, 0, 0)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#73000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+
+}
+.logged-out .nav-collapse .nav {
+  width: 100%;
+}
+.logged-out .nav-cwl-login {
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+.logged-out p.captions {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  padding: 0 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
+  .logged-out .home-hgroup {
+    background-attachment: initial;
+    background-position: -600px 0;
+    -webkit-background-size: initial;
+    -moz-background-size: initial;
+    -o-background-size: initial;
+    background-size: initial;
+  }
+  .logged-out .home-hgroup .page-title {
+    font-size: 300%;
+  }
+  .logged-out .home-hgroup img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 979px) {
+  .logged-out .home-hgroup {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .logged-out .content.expand,
+  .logged-out .row-fluid .utility.span12 {
+    height: 500px!important;
+    height: 100vh!important;
+  }
+  .logged-out .nav-cwl-login {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: -7px auto 10px;
+    padding: 12px 0;
+    background-color: #0680a6;
+  }
+  .logged-out .nav-cwl-login img {
+    display: block;
+    margin: 0 auto;
+  }
+  .logged-out .home-hgroup h1.page-title,
+  .logged-out .home-hgroup p {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .logged-out .content.expand,
+  .logged-out .user-menu,
+  .logged-out .row-fluid .utility.span12,
+  .logged-out .row-fluid .utility.span12,
+  .logged-out .home-hgroup {
+    height: 500px!important;
+  }
+  .logged-out .home-hgroup p {
+    display: block;
+    margin-top: 30px;
+    margin-left: 0;
+    padding: 10px 20px 10px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .logged-out .home-hgroup p.captions {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    padding: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
